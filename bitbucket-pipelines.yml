@@ -1,0 +1,11 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy to Dev
+          script:
+            - pipe: atlassian/ssh-run:0.4.1
+              variables:
+                SSH_USER: 'root'
+                SERVER: '37.27.9.57'
+                COMMAND: ' cd ../var/www/corp_commerce/ && git checkout master && git pull origin master && echo -e "Done" '
