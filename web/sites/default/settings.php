@@ -814,11 +814,11 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'corp_commerce',
+  'database' => 'default',
   'username' => 'root',
   'password' => 'root',
   'prefix' => '',
-  'host' => 'localhost',
+  'host' => 'db',
   'port' => '3306',
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'driver' => 'mysql',
